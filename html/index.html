@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos Colombia - Parqueadero</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<script>
+  if (!localStorage.getItem("userLoggedIn")) {
+    window.location.href = "login.html";
+  }
+</script>
+
+<body>
+    <header>
+        <h1>Autos Colombia - Sistema de Parqueadero</h1>
+        <a href="#" class="btn logout-btn" onclick="logout(); return false;">Cerrar sesión</a>
+    </header>
+
+    
+    <div class="main-menu">
+        <div class="menu-card">
+            <h2>Entradas y Salidas</h2>
+            <p>Registro de vehículos que ingresan y salen</p>
+            <a href="entradas-salidas.html">Acceder</a>
+        </div>
+        
+        <div class="menu-card">
+            <h2>Usuarios y Celdas</h2>
+            <p>Gestión de usuarios y asignación de espacios</p>
+            <a href="usuarios-celdas.html">Acceder</a>
+        </div>
+
+        <div class="menu-card">
+            <h2>Pagos</h2>
+            <p>Gestión de pagos y facturación</p>
+            <a href="pagos.html">Acceder</a>
+        </div>
+
+    </div>
+    <script>
+  function logout() {
+    localStorage.removeItem("userLoggedIn");
+    window.location.href = "login.html";
+  }
+</script>
+    
+    
+    <script src="js/common.js"></script>
+</body>
+</html>
